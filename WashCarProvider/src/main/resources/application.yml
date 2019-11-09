@@ -1,0 +1,31 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://118.190.132.99:8761/eureka/  #注册中心的地址
+
+server:
+  port: 8901
+
+spring:
+  application:
+    name: WashCarProvider
+  rabbitmq:
+    host: 118.190.132.99
+    port: 5672
+    username: stream
+    password: stream
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://118.190.132.99:3306/db_washcar?useSSL=false&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
+

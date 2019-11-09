@@ -1,0 +1,19 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://118.190.132.99:8761/eureka/  #注册中心的地址
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 6000
+  MaxAutoRetris: 10  #重试次数
+
+server:
+  port: 8911
+
+spring:
+  application:
+    name: WashCarApi
+  main:
+    allow-bean-definition-overriding: true
+
