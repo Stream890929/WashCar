@@ -20,7 +20,7 @@ import java.util.Map;
  * @version: 1.0
  * @description: 参数过滤
  */
-@Component
+//@Component
 public class CheckParamFilter extends ZuulFilter {
     /**
      * to classify a filter by type. Standard types in Zuul are "pre" for pre-routing filtering,

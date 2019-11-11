@@ -1,23 +1,32 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://118.190.132.99:8761/eureka/  #注册中心的地址
+
 spring:
   application:
     name: zuulProxy
 server:
   port: 8080
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://118.190.132.99:8761/eureka/  #注册中心的地址
-zuul:
-  routes:
-    wash:   #名称任意指定
-      path: /**      #请求路径
-      serviceId: WashCarApi  #注册中心的服务名称
+management:
+  health:
+    rabbit:
+      enabled: false
+
 ribbon:
   eureka:
     enabled: true
   ConnectTimeout: 10000
   ReadTimeout: 10000
+
+zuul:
+  routes:
+    wash:   #名称任意指定
+      path: /**      #请求路径
+      serviceId: WashCarApi  #注册中心的服务名称
+
 #    user:
 #      path: /user/**
 #      serviceId:  服务名称
+
